@@ -7,5 +7,6 @@
 #include <Windows.h>
 #include <stdio.h>
 #include<VersionHelpers.h>
+#include <tchar.h>
 
 #endif //PCH_H
