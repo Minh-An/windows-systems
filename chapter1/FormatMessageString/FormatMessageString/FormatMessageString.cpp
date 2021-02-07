@@ -10,11 +10,11 @@ LPWSTR GetFormattedMessage(LPCWSTR pMessage, ...);
 int main(void)
 {
     LPWSTR pBuffer = NULL;
-    LPCWSTR pMessage = L"%1!*.*s! %3 %4!*s!";
+    LPCWSTR pMessage = L"%1!*.*s! %3!*s! %4!*s!";
 
     // The variable length arguments correspond directly to the format
     // strings in pMessage.
-    pBuffer = GetFormattedMessage(pMessage, 4, 3, L"Bill", L"Bob", 4, L"Bill");
+    pBuffer = GetFormattedMessage(pMessage, 4, 3, L"Bill", 4, L"Bob", 4, L"Bill");
     if (pBuffer)
     {
         // Buffer contains "  Bi Bob   Bill".
